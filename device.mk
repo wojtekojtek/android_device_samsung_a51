@@ -33,3 +33,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Init.rc
 PRODUCT_PACKAGES += \
     fingerprint_common.rc
+
+# Audio configs
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(DEVICE_PATH)/configs/audio/mixer_paths_ti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_ti.xml
