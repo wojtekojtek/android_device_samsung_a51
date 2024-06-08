@@ -41,4 +41,8 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung
+    android.hardware.biometrics.fingerprint@2.3-service.samsung \
+    sensors.samsung
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
