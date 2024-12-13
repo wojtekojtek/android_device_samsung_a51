@@ -45,3 +45,30 @@ PRODUCT_MODEL := SM-A515F
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# RisingOS
+RISING_MAINTAINER="wojtekojtek"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Exynos 9611" \
+    RisingMaintainer="wojtekojtek"
+
+RISING_PACKAGE_TYPE := "WITH_GMS"
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := false
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
+
+PRODUCT_PACKAGES += \
+   Photos \
+   MarkupGoogle \
+   LatinIMEGooglePrebuilt \
+   AiWallpapers \
+   WallpaperEmojiPrebuilt \
+   PrebuiltDeskClockGoogle \
+   CalculatorGooglePrebuilt \
+   CalendarGooglePrebuilt \
+   Velvet
+
+TARGET_CORE_GMS_EXTRAS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
